@@ -19,4 +19,3 @@ Database Engine - The database for the project is PostgreSQL. This can be seen i
 * There is a “Challenges” section of the app that has QR codes that can be scanned and a challenging workout will be given.
 
 
-# GitFit
