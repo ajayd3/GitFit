@@ -8,7 +8,7 @@
 * Meaningful Functionality based on Login: Users can keep track of their workout progress, enter their weight and height, and make posts on a forum which displays their name under their post.
 * Third-Party API: The Youtube Data API was used and incorporated in this project. This can be seen by going into the “search” folder of the project and then by looking at the views.py file of this folder. On the website, go to the home page and click on “Search Youtube” and then you’ll be directed to a page with a search bar. You will be able to search up a video from Youtube that you can watch.
 * Tools and Frameworks: The project was built in Python3 and in the Django framework, hosted with Heroku, and used Travis-CI for continuous integration testing. 
-Database Engine - The database for the project is PostgreSQL. This can be seen in line 97 of the settings.py file located in the exercise folder.
+Database Engine - The database for the project is PostgreSQL.
 
 ### Exercise Gamification Requirements:
 * Gamification - Users who complete workouts are able to earn xp. When going to the “Workouts” page of the application, and choosing a workout. There will then be a list of workouts shown on the page, pick one and there will be a “Complete” button that the user can click on and earn xp. This xp can be viewed through the “Progress Tracker” on the top-menu bar.
