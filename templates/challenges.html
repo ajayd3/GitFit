@@ -1,0 +1,149 @@
+{% load socialaccount %}
+{% if user.is_authenticated %}
+
+
+
+
+{% else %}
+  <a href="{% provider_login_url 'google' %}">Login With Google</a>
+{% endif %}
+
+
+{% load socialaccount %}
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+ 
+        <title>GitFit</title>
+        {% if user.is_authenticated %}
+        <!--<meta http-equiv = "refresh" content = "0; url = /dashboard/" />-->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+              <a class="navbar-brand js-scroll-trigger" href="#page-top"><img  alt="" /></a>
+
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/">Home</a></li>
+                      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/choices/">Workouts</a></li>
+                      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/progress/">Progress Tracker</a></li>
+                      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/challenges/">Challenges</a></li>
+                      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/dashboard/profile/{{ user.username }}">Profile</a></li>
+
+                 
+               
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+            
+            </div>
+        </header>
+       
+        <!-- Portfolio Modals-->
+        <!-- Modal 1-->
+        
+        <!-- Modal 2-->
+       
+        <!-- Modal 3-->
+        
+        <!-- Modal 4-->
+       
+        <!-- Modal 5-->
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <script src="assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    
+
+    {% else %} 
+<body style="background-image: linear-gradient(180deg, rgb(79, 223, 215), rgb(255, 255, 255)); width : 50px">
+<h1 style="margin-top: 350px; text-align: center;">WELCOME</h1>
+
+    <!--<a href="{% provider_login_url 'google' %}">Login With Google</a>-->
+  <div class="row d-flex justify-content-center " style="  margin-top: 500px; margin-left: auto;  margin-right: auto; ">
+    
+    <div class="col-md-3 ">
+    
+      <a class="btn btn-outline-dark " href="{% provider_login_url 'google' %}" role="button" style="text-transform:none">
+        <img  width="20px" style=" margin-top: auto;" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+        Login with Google
+      </a>
+
+    </div>
+  </div>
+</body>
+  <!-- Minified CSS and JS -->
+  <link   rel="stylesheet" 
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+          crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+          crossorigin="anonymous">
+  </script>
+  <!--taken from https://stackoverflow.com/questions/46654248/how-to-display-google-sign-in-button-using-html-->
+  
+{% endif %}
+    </body>
+</html>
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+
+<center>
+  <embed style="text-align:center; width:2000px; height: 700px"src="https://www.overstellar.se/random-exercise/">
+</center>
+
+<p>
+  <div style="text-align:center;">
+      <form method= "POST" action="{% url 'oauth_app:add_points' %}">
+          {% csrf_token %}
+          <input type= "submit" class= "btn btn-outline-dark" value= "Complete" name="points_btn"/>
+          <a href="/dashboard/" class="btn btn-outline-dark">Home</a>
+      </form>
+  </div>
+</p>

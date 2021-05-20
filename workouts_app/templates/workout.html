@@ -1,0 +1,20 @@
+{% extends "workout_base.html" %}
+
+{% block content %}
+<div style="text-align:center;">
+    <h1>{{wr.workout_title}}</h1>
+    <h2>{{wr.workout_type}}</h2>
+    <p>difficulty: {{wr.workout_difficulty}}</p>
+    <p>It'll take {{wr.workout_length}} minutes</p>
+    <p>{{wr.workout_info}}</p>
+    <p>
+</div>
+        <div style="text-align:center;">
+        <form method= "POST" action="{% url 'oauth_app:add_points' %}">
+            {% csrf_token %}
+            <input type= "submit" class= "btn btn-outline-dark" value= "Complete" name="points_btn"/>
+            <a href="/dashboard/" class="btn btn-outline-dark">Home</a>
+            </form>
+        </div>
+    </p>
+    {% endblock content %}

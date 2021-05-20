@@ -1,0 +1,12 @@
+{% extends "workout_base.html" %}
+
+{% block content %}
+<div style="text-align:center;">
+    <h1>{{diff}} {{type}} Routines</h1>
+    {% for workouts in workout_list%}
+    <p></p>
+    <li><a href="/workoutroutines/{{workouts.id }}">{{workouts.workout_title}}</a></li>
+
+    {% endfor %}
+</div>
+{% endblock content %}

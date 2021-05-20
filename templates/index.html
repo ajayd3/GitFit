@@ -1,0 +1,250 @@
+
+{% load socialaccount %}
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+ 
+        <title>GitFit</title>
+        {% if user.is_authenticated %}
+        <!--<meta http-equiv = "refresh" content = "0; url = /dashboard/" />-->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img  alt="" /></a>
+
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button  >
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/choices/">Workouts</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/progress/">Progress Tracker</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/challenges/">Challenges</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://exercise-gamification-b29.herokuapp.com/forums/">Forum</a></li>
+
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/dashboard/profile/{{ user.username }}">Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+            
+            </div>
+        </header>
+        <!-- Services-->
+        <section class="page-section" id="workouts">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Workouts</h2>
+                    <a class="btn" href="/choices">View Workouts »</a>
+        <a class="btn" href="/search">Search Youtube »</a>
+   
+                    <h3 class="section-subheading text-muted">              </h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-running fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Cardio</h4>
+                        <p class="text-muted">Performing cardio exercises regularly will help us maintain our ideal weight. It helps control blood pressure and strengthens the immune system.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-dumbbell fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Strength</h4>
+                        <p class="text-muted">Strength training may improve your ability to do everyday activities. This can help you maintain independence as you age.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-spa fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Wellness</h4>
+                        <p class="text-muted">Wellness training is good at helping people adopt and maintain healthy behaviors. Wellness is especially important as we age.</p>
+                    </div>
+                    
+
+                    <div class="col-md-4">
+                       
+                    </div>
+
+                    <div class="col-md-4" style="transform: translateY(-4%);">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-share-square fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">DIY</h4>
+                        <a class="btn" href="/new-workout-routine/">Submit Your Own Workout »</a>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Progress Tracker</h2>
+                    <a class="btn" href="/progress">View Progress »</a>
+
+                    <h3 class="section-subheading text-muted">             </h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#Modal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                            </a>
+                           
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Challenges</h2>
+                    <a class="btn" href="challenges">View Challenges »</a>
+
+                    <h3 class="section-subheading text-muted">             </h3>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                
+                                <h4 class="subheading">Complete Bonus Exercises</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted"></p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Earn GitPoints</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted"></p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Share your Thoughts</h4>
+                                <a class="btn" href="/forums/">post your thoughts »</a>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted"></p></div>
+                        </div>
+                    </li>
+                           
+                    <li class="timeline-inverted">
+                      
+                        <div class="timeline-image">
+                            <h4>
+                                Become
+                                <br />
+                                Your
+                                <br />
+                                Best self!
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <a style=" margin-left: 46%;" class="btn btn-outline-dark" href="/logout"}>Log out</a>
+
+
+       
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <script src="assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    
+
+    {% else %} 
+<body style="background-size:cover; margin-top: 350px; text-align:center; background-repeat: no-repeat; background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjQOe941Dw1lLtNgbY53eJw6-If40UEkWesOS1Zw3SNU0mUPqX492SpEdGBqxv2SmFxPw&usqp=CAU')">
+<h1 style="margin-top: 350px; text-align: center;">WELCOME</h1>
+<a class="btn btn-outline-dark " href="{% provider_login_url 'google' %}" role="button" style="text-transform:none">
+    <img  width="20px" style=" margin-top: auto;" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+    Login with Google
+  </a>
+    <!--<a href="{% provider_login_url 'google' %}">Login With Google</a>-->
+  <div class="row d-flex justify-content-center " style="  margin-top: 500px; margin-left: auto;  margin-right: auto; ">
+       
+  </div>
+</body>
+  <!-- Minified CSS and JS -->
+  <link   rel="stylesheet" 
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+          crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+          crossorigin="anonymous">
+  </script>
+  <!--taken from https://stackoverflow.com/questions/46654248/how-to-display-google-sign-in-button-using-html-->
+  
+{% endif %}
+    </body>
+</html>

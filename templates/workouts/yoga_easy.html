@@ -1,0 +1,46 @@
+<html>
+    <style>
+table {
+  font-family: Tahoma, sans-serif;
+  border-collapse: collapse;
+  width: 99%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+    <h1 style=text-align:center>Easy Yoga Workouts </h1>
+    <p> The total time to complete this workout is 15 minutes:</p>
+
+        
+    <p> 1. Begin in extended child’s pose. Relax your body and take 3 deep breaths and relax all parts of your body
+        2. Rise up in tabletop position and go into cow position. Drop your stomach down and lift your chin up and take a deep breath in and round your spin and tuck your chin. 
+        3. Press your shoulder blades towards the ceiling and breathe in and out. Round your spine
+        4. Extend your right leg and lift your leg up to be parallel with the ceiling
+        5. Lower your knee andn lift your left leg up
+        6. Go into downward dog position 
+        7. In downward dog position walk to the top of your mat keeping your hands in the same place. Hold this position for 30 seconds
+        8. Slowly unrolly your spine and stand up straight
+        9. Shrug your shoulders back up to your ears and down
+        10. Breathe in and out
+        11. Repeat 3 times in total
+     </p>
+    <br>
+    <br>
+      <h1 style=text-align:center>Easy Yoga Custom Workouts:</h1>
+
+      <table class="center">
+    {% for workouts in workouts_list %}
+          <tr>
+        <td style ="text-align:center">{{workouts.workout_info}}</td>
+          </tr> 
+        {% endfor %}
+          </table>
+</html>

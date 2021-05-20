@@ -1,0 +1,157 @@
+{% load socialaccount %}
+{% if prof.user.is_authenticated %}
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<div class="container">
+ 
+    <div class="row my-2">
+        <div class="col-lg-8 order-lg-2">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="" data-target="#profile" data-toggle="tab" class="nav-link active">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" data-target="#friends" data-toggle="tab" class="nav-link">Friends</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" data-target="#edit" data-toggle="tab" class="nav-link">User Info</a>
+                </li>
+            </ul>
+            <div class="tab-content py-4">
+                <div class="tab-pane active" id="profile">
+                    <h5 class="mb-3"></h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1>Welcome, {{user.first_name}}!</h1>
+                          
+                            <h6>
+<!-------Do not change below this line-------><div align=""><iframe align="center" src="//widget.calendarlabs.com/v1/quot.php?cid=101&ver=1.2&uid=3755736994&c=inspirational&l=en&cbg=FFFFFF&cb=0&cbc=000000&cf=calibri&cfg=000000&qfs=bi&qta=center&tfg=000000&tfs=bi&afc=000000&afs=i" width="188" height="210" marginwidth=0 marginheight=0 frameborder=no scrolling=no allowtransparency='true'>Loading...</iframe><div align="center" style="width:140px;font-size:10px;color:#333;"> <a href="https://www.calendarlabs.com/" target="_blank" rel="nofollow" style="font-size:10px;text-decoration:none;color:#333;"></a></div></div><!-------Do not change above this line------->                            </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Accomplishments </h6>
+                           <!--<a href="#" class="badge badge-dark badge-pill">html5</a>
+                            <a href="#" class="badge badge-dark badge-pill">react</a>
+                            <a href="#" class="badge badge-dark badge-pill">codeply</a>
+                            <a href="#" class="badge badge-dark badge-pill">angularjs</a>
+                            <a href="#" class="badge badge-dark badge-pill">css3</a>
+                            <a href="#" class="badge badge-dark badge-pill">jquery</a>
+                            <a href="#" class="badge badge-dark badge-pill">bootstrap</a>
+                            <a href="#" class="badge badge-dark badge-pill">responsive-design</a>--> 
+                            <hr>
+                        </div>
+                        <div class="col-md-12">
+                            <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span>  </h5>
+                            <table class="table table-sm table-hover table-striped">
+                               <tbody>
+
+
+
+
+  
+
+
+
+
+                            </table>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-lg-4 order-lg-1 text-center " style = "margin-left: auto;
+                    margin-right: auto;">
+                        <img src="https://media4.giphy.com/media/4bjIKBOWUnVPICCzJc/source.gif" class="center" style= "text-align: center; margin-left: auto;
+                        margin-right: auto; height: 500px; width : 500px"  alt="avatar" >
+                        <label class="custom-file">
+                            <input type="file" id="file" class="custom-file-input">
+                            <span class="custom-file-control"></span>
+                        </label>
+                    </div>
+                    <!--/row-->
+                </div>
+                <div class="tab-pane" id="friends">
+                    
+                    <table class="table table-hover table-striped">
+                        <tbody>                                    
+
+
+
+
+                        </tbody> 
+                    </table>
+                </div>
+                <div class="tab-pane" id="edit">
+                    <form role="form">
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Name</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text" value="{{prof.user.first_name}}">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Weight</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text" placeholder="i.e 120 lbs">
+                            </div>
+                        </div>
+                        
+
+
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Height</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text" value="" placeholder="i.e 5'6 ft">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label"></label>
+                       
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Time Zone</label>
+                            <div class="col-lg-9">
+                                <select id="user_time_zone" class="form-control" size="0">
+                                    <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                                    <option value="Alaska">(GMT-09:00) Alaska</option>
+                                    <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                                    <option value="Arizona">(GMT-07:00) Arizona</option>
+                                    <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+                                    <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
+                                    <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                                    <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label"></label>
+                            <div class="col-lg-9">
+                                <input type="reset" class="btn btn-secondary" value="Cancel">
+                                <input type="submit" class="btn btn-primary" value="Save Changes">
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+{% else %}
+  <a href="{% provider_login_url 'google' %}">Login With Google</a>
+{% endif %}
+

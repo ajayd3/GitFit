@@ -1,0 +1,42 @@
+<html>
+    <style>
+table {
+  font-family: Tahoma, sans-serif;
+  border-collapse: collapse;
+  width: 99%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+    <h1 style=text-align:center>Difficult Cardio Workouts </h1>
+    <p> This will be a high intensity interval training cardio workout. The total time required to complete this workout is 25 minutes</p>
+
+        
+    <p> 1. Warm Up: Brisk walk or jog at a comfortable pace for 5 minutes. 
+        2. Set your speed and incline to a very challenging pace. 
+        3. We recommend between 9 and 11 mph and incline from 1.0 to 4.0. Go all out sprinting for 30 seconds. 
+        4. Lower the speed to 3.5 to 4 mph and walk for one minute. This is your recovery period.
+        5. Repeat the cycle 9 more times for a total of 10 cycles.
+        6. Cool down: Walk at your recovery speed for five minutes to cool down. 
+        
+        </p>
+    <br>
+    <br>
+   <h1 style=text-align:center>Difficult Cardio Custom Workouts:</h1>
+
+      <table class="center">
+    {% for workouts in workouts_list %}
+          <tr>
+        <td style ="text-align:center">{{workouts.workout_info}}</td>
+          </tr> 
+        {% endfor %}
+          </table>
+</html>

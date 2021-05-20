@@ -1,0 +1,41 @@
+<html>
+    <style>
+table {
+  font-family: Tahoma, sans-serif;
+  border-collapse: collapse;
+  width: 99%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+    <h1 style=text-align:center>Moderate Cardio Workouts </h1>
+    <p> This workout will take a total of 33 minutes: </p>
+
+    <p> Please follow the steps below: </p> 
+        
+    <p> 1. 5-min warm-up at a brisk walk pace 
+        2. Run 1 minute at 7mph followed by 2 minutes at 5.5mph – repeat 5 times (15 minutes) 
+        3. Walk 1 minute at an easy pace to recover a bit 
+        4. Run 30 seconds at 10-12mph followed by 1 minute at 4mph – repeat 5 times (7.5 minutes) 5. 5. 4-minute cool down walk
+        </p>
+    <br>
+    <br>
+   <h1 style=text-align:center>Moderate Cardio Custom Workouts:</h1>
+
+      <table class="center">
+    {% for workouts in workouts_list %}
+          <tr>
+        <td style ="text-align:center">{{workouts.workout_info}}</td>
+          </tr> 
+        {% endfor %}
+          </table>
+    
+</html>

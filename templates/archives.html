@@ -1,0 +1,8 @@
+{% load socialaccount %}
+{% if user.is_authenticated %}
+
+<h1>Favorited and Saved Workouts </h1>
+
+{% else %}
+  <a href="{% provider_login_url 'google' %}">Login With Google</a>
+{% endif %}

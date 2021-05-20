@@ -1,0 +1,281 @@
+
+
+{% load socialaccount %}
+{% if user.is_authenticated %}
+{% csrf_token %}
+
+
+{% load socialaccount %}
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+ 
+        <title>GitFit</title>
+        {% if user.is_authenticated %}
+        <!--<meta http-equiv = "refresh" content = "0; url = /dashboard/" />-->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img  alt="" /></a>
+
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://exercise-gamification-b29.herokuapp.com/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://exercise-gamification-b29.herokuapp.com/choices/">Workouts</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://exercise-gamification-b29.herokuapp.com/progress/">Progress Tracker</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://exercise-gamification-b29.herokuapp.com/challenges/">Challenges</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/dashboard/profile/{{ user.username }}">Profile</a></li>
+               
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+            
+            </div>
+        </header>
+       
+        <!-- Portfolio Modals-->
+        <!-- Modal 1-->
+        
+        <!-- Modal 2-->
+       
+        <!-- Modal 3-->
+        
+        <!-- Modal 4-->
+       
+        <!-- Modal 5-->
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <script src="assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    
+
+    {% else %} 
+<body style="background-image: linear-gradient(180deg, rgb(79, 223, 215), rgb(255, 255, 255)); width : 50px">
+<h1 style="margin-top: 350px; text-align: center;">WELCOME</h1>
+
+    <!--<a href="{% provider_login_url 'google' %}">Login With Google</a>-->
+  <div class="row d-flex justify-content-center " style="  margin-top: 500px; margin-left: auto;  margin-right: auto; ">
+    
+    <div class="col-md-3 ">
+    
+      <a class="btn btn-outline-dark " href="{% provider_login_url 'google' %}" role="button" style="text-transform:none">
+        <img  width="20px" style=" margin-top: auto;" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+        Login with Google
+      </a>
+
+    </div>
+  </div>
+</body>
+  <!-- Minified CSS and JS -->
+  <link   rel="stylesheet" 
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+          crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+          crossorigin="anonymous">
+  </script>
+  <!--taken from https://stackoverflow.com/questions/46654248/how-to-display-google-sign-in-button-using-html-->
+  
+{% endif %}
+    </body>
+</html>
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<div class="container">
+    <div class="row my-2">
+        <div class="col-lg-8 order-lg-2">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="" data-target="#profile" data-toggle="tab" class="nav-link active">Profile</a>
+                </li>
+   
+                <li class="nav-item">
+                    <a href="" data-target="#edit" data-toggle="tab" class="nav-link">User Info</a>
+                </li>
+            </ul>
+
+            
+            <div class="tab-content py-4">
+                <div class="tab-pane active" id="profile">
+                    <h5 class="mb-3"></h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                           {% csrf_token %}
+                           
+                            <h6>
+<!-------Do not change below this line-------><div align=""><iframe align="center" src="//widget.calendarlabs.com/v1/quot.php?cid=101&ver=1.2&uid=3755736994&c=inspirational&l=en&cbg=FFFFFF&cb=0&cbc=000000&cf=calibri&cfg=000000&qfs=bi&qta=center&tfg=000000&tfs=bi&afc=000000&afs=i" width="188" height="210" marginwidth=0 marginheight=0 frameborder=no scrolling=no allowtransparency='true'>Loading...</iframe><div align="center" style="width:140px;font-size:10px;color:#333;"> <a href="https://www.calendarlabs.com/" target="_blank" rel="nofollow" style="font-size:10px;text-decoration:none;color:#333;"></a></div></div><!-------Do not change above this line------->                            </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <h1>Welcome, {{user.first_name}}!</h1>
+                            <br>
+
+                            <h6>Accomplishments </h6>
+                            <div class="progress">
+  
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{user.userprofile.points}}" aria-valuemin="0" aria-valuemax="100" style="width: {{user.userprofile.points}}%">{{user.userprofile.points}} XP</div>
+</div>
+                           <!--<a href="#" class="badge badge-dark badge-pill">html5</a>
+                            <a href="#" class="badge badge-dark badge-pill">react</a>
+                            <a href="#" class="badge badge-dark badge-pill">codeply</a>
+                            <a href="#" class="badge badge-dark badge-pill">angularjs</a>
+                            <a href="#" class="badge badge-dark badge-pill">css3</a>
+                            <a href="#" class="badge badge-dark badge-pill">jquery</a>
+                            <a href="#" class="badge badge-dark badge-pill">bootstrap</a>
+                            <a href="#" class="badge badge-dark badge-pill">responsive-design</a>--> 
+                            <hr>
+                        </div>
+                        <div class="col-md-12">
+                            <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span>  </h5>
+                            <table class="table table-sm table-hover table-striped">
+
+                                       <tbody>
+
+
+                                   
+                                    <form action="/dashboard/profile/{{user.username}}/" method="post">
+                                        {% csrf_token %}
+                                        {{ form }}
+                           
+                                    </form>
+
+                                  
+  
+
+
+
+
+                            </table>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-lg-4 order-lg-1 text-center " style = "margin-left: auto;
+                    margin-right: auto;">
+                        <img src="https://media4.giphy.com/media/4bjIKBOWUnVPICCzJc/source.gif" class="center" style= "text-align: center; margin-left: auto;
+                        margin-right: auto; height: 500px; width : 500px"  alt="avatar" >
+                       
+                    </div>
+                    <!--/row-->
+                </div>
+                <div class="tab-pane" id="friends">
+                    
+                    <table class="table table-hover table-striped">
+                        <tbody>                                    
+
+
+
+
+                        </tbody> 
+                    </table>
+                </div>
+                <div class="tab-pane" id="edit">
+                    <form action="submit-profile/" method="post">
+                    	{% csrf_token %}
+                        <!--<div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Name</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text" value="{{user.username}}">
+                            </div>
+                        </div>-->
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Weight (in lb)</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="number"name="weight_field" id="weight_field_box" placeholder={{user.userprofile.weight}} lbs">
+                            </div>
+                        </div>
+                        
+
+
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Height (in inches)</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" input type="number" name="height_field" id="height_field_box" placeholder={{user.userprofile.height}}>
+                            </div>
+                            <label class="col-lg-3 col-form-label form-control-label">Points: {{user.userprofile.points}}</label>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label"></label>
+                       
+                        </div>
+                        <!--<div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Time Zone</label>
+                            <div class="col-lg-9">
+                                <select id="user_time_zone" class="form-control" size="0">
+                                    <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                                    <option value="Alaska">(GMT-09:00) Alaska</option>
+                                    <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                                    <option value="Arizona">(GMT-07:00) Arizona</option>
+                                    <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+                                    <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
+                                    <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                                    <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                                </select>
+                            </div>
+                        </div>-->
+                        
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label"></label>
+                            <div class="col-lg-9">
+                                <input type="reset" class="btn btn-secondary" value="Cancel">
+                                <input type="submit" class="btn btn-primary" value="Save Changes">
+                            </div>
+                        </div>
+
+                    </form>
+            
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+{% else %}
+  <a href="{% provider_login_url 'google' %}">Login With Google</a>
+{% endif %}
+

@@ -1,0 +1,6 @@
+<div class="text-center">
+    <h2>List of Workouts</h2>
+        {% for workouts in workouts_list %}
+        <li>{{workouts.workout_type}} : {{workouts.workout_difficulty}} : {{workouts.workout_info}}</li>
+        {% endfor %}
+</div>

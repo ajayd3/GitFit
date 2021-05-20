@@ -1,0 +1,38 @@
+<html>
+    <style>
+table {
+  font-family: Tahoma, sans-serif;
+  border-collapse: collapse;
+  width: 99%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+    <h1 style=text-align:center>Easy Weightlifting Workouts </h1>
+    <p> 1) The total time required to complete this workout is 1 hour.</p>
+
+    <p> Start off by stretching.</p> 
+        
+    <p> Start off by warming up using the bar. Perform 3 sets of 8-12 reps of bench press. Adjust weight so that each set can be completed with at least 8 reps. Take a rest of 3 minutes between sets
+    Move to should press machine. Perform 3 sets of 10-12 reps of shoulder press. Adjust weight accordingly. Take a 2 minute rest between sets
+    Perform 3 sets of 8-10 reps of tricep pull downs. Adjust weight so that each set goes until failure. Rest 2 minutes between each set.</p> 
+<br>
+    <br>
+   <h1 style=text-align:center>Easy Weightlifting Custom Workouts:</h1>
+
+      <table class="center">
+    {% for workouts in workouts_list %}
+          <tr>
+        <td style ="text-align:center">{{workouts.workout_info}}</td>
+          </tr> 
+        {% endfor %}
+          </table>
+</html>

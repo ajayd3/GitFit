@@ -1,0 +1,58 @@
+
+<html>
+    <style>
+table {
+  font-family: Tahoma, sans-serif;
+  border-collapse: collapse;
+  width: 99%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+    <h1 style=text-align:center>Difficult Yoga Workouts </h1>
+    The total time needed to complete this workout is 25 minutes:
+Begin by stretching all parts of your body for 5 minutes
+
+Proceed to King Pigeon Pose:
+Assume Pigeon Pose with your left knee bent in front of you and your right leg extended behind you. Bend your right knee and bring your foot up toward your back. Arch your back and drop your head down. Reach your hands over your head and grab hold of your foot with both hands.
+
+Proceed to Dove Pose:
+Kneel on the floor with your arms down at your sides. With your fingers facing forward, lean back onto your hands with your arms straight. Lower down onto your forearms. Begin to push your thighs up and out, arching your back, dropping your head, and moving your hands as close to your feet as possible.
+
+Proceed to Peacock Pose:
+Kneel on the floor with your knees wide and sit on your heels. Lean forward and place your palms on the floor with your fingers facing back toward your body. Bend your elbows and slide your knees to the outside of your arms. Lean your torso onto your upper arms and lower your head. Straighten your knees and extend your legs behind you, starting first with the tops of your feet on the floor. When you feel stable here, shift your weight forward and lift your legs off the ground.
+
+Proceed to Lord of the Dance Pose:
+Stand with your feet together and arms down at your sides. Bend your left knee, bringing your foot to your butt. Grab the outside of your foot with your left hand, pushing your tailbone down and your pelvis up toward your belly button. Allow your knee to extend slightly as it moves up toward the ceiling. Extend your right arm in front of you parallel to the floor.
+
+Proceed to Headstand Pose:
+Get onto all fours with your wrists under your shoulders and your knees under your hips. Bring your forearms to the floor, clasping your hands and placing the top of your head on the floor right in front of your hands. Straighten your legs and walk them into the Downward Dog position. Aim to get your hips as close as possible to shoulder level. Inhale and lift one leg up toward the ceiling, then follow with the other.
+
+Proceed to Headstand Lotus:
+Assume a Headstand position. Interlock your legs by bending your right leg and placing it on your left thigh. Follow by bending your left leg and placing it on your right thigh.
+
+Proceed to Firefly Pose:
+Squat down and lean your torso forward between your legs. Place your hands on the floor inside your legs. Bring your upper arms as close to your upper thigh as possible. Begin to lift yourself off the floor and push your weight into your hands. Shift your center of gravity back, allowing your legs to straighten in front of you.
+
+Repeat a total of 3 times.
+<br>
+<br>
+   <h1 style=text-align:center>Difficult Yoga Custom Workouts:</h1>
+
+      <table class="center">
+    {% for workouts in workouts_list %}
+          <tr>
+        <td style ="text-align:center">{{workouts.workout_info}}</td>
+          </tr> 
+        {% endfor %}
+          </table>
+    
+</html>

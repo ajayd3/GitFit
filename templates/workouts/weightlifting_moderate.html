@@ -1,0 +1,41 @@
+<html>
+    <style>
+table {
+  font-family: Tahoma, sans-serif;
+  border-collapse: collapse;
+  width: 99%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+    <h1 style=text-align:center>Moderate Weightlifting Workouts </h1>
+    <p> 1)The total time required to complete this workout is 1 hour, 15 minutes</p>
+
+    <p> Start off by stretching.</p> 
+        
+    <p> 1. Start off by warming up using the bar. Perform 4 sets of 8-10 reps of bench press. Adjust weight so that each set can be completed with at least 8 reps. Take a rest of 3 minutes between sets
+        2. Move to the shoulder press machine. Perform 4 sets of 8-12 reps of shoulder press. Adjust weight accordingly. Take a 2 minute rest between sets
+        3. Perform 3 sets of 8-10 reps of incline bench press. Adjust weight to go till failure on each set.
+        4. Perform 4 sets of 8-10 reps of tricep pull downs. Adjust weight so that each set goes until failure. Rest 2 minutes between each set.
+        5. Perform 3 sets of 8-10 reps of skull crushers. Adjust weight so that each set goes till failure.
+        </p>
+    <br>
+    <br>
+   <h1 style=text-align:center>Moderate Weightlifting Custom Workouts:</h1>
+
+      <table class="center">
+    {% for workouts in workouts_list %}
+          <tr>
+        <td style ="text-align:center">{{workouts.workout_info}}</td>
+          </tr> 
+        {% endfor %}
+          </table>
+</html>

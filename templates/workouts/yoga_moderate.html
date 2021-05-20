@@ -1,0 +1,52 @@
+<html>
+    <style>
+table {
+  font-family: Tahoma, sans-serif;
+  border-collapse: collapse;
+  width: 99%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+    <h1 style=text-align:center>Moderate Yoga Workouts </h1>
+    The total time needed to complete this workout is 20 minutes:
+Begin in the downward dog pose:
+Get on all fours on your mat with your hands underneath your shoulders and your knees underneath your hips. Inhale. Exhale and lift your knees away from the floor, pushing your heels down toward the floor. Lift your tailbone toward the ceiling. Do not lock your knees. Draw your shoulder blades toward your tailbone and keep your head between your arms. Stay here, working on getting your feet in contact with the ground.
+Proceed to the warrior pose:
+Stand with your feet together and arms at your side. Step with your left foot into a lunge, keeping your right leg straight and turning your right foot at a 45-degree angle. Extend your arms above your head. Squeeze your shoulder blades together and down, and lift your head to look up at your fingertips.
+
+Proceed to bridge pose:
+Lie on your back with your knees bent and feet flat on the ground. Place your arms at your sides with your palms on the ground. Inhale. Exhale and push up through your feet, pushing your hips up toward the sky.
+
+Proceed to Garland pose:
+Squat down with your feet as close together as you can get them, toes pointed out. Let your torso fall between your thighs, pressing your elbows against your knees. Keep your tailbone pressed toward the ground and your chest up, using the resistance of your knees to help you.
+
+Proceed to Bow Pose:
+Lay on your stomach with your arms extended by your sides and your palms up. Bend your knees and reach back, grabbing hold of your ankles with your hands. Keep your knees in line with your hips. As you inhale, lift your heels away from your butt while you lift your thighs off the ground. Press your shoulder blades back and look forward.
+
+Proceed to Boat Pose:
+Sit on your butt with your legs extended in front of you. Lean back slightly with your hands on the ground supporting you. Inhale and bring your knees toward your chest, stopping when your thighs are at a 45-degree angle to the ground. Extend your legs if possible — otherwise, keep them here. Bring your arms out in front of you so they’re parallel to the floor. Hold here.
+
+Repeat 3 times in total.
+    <br>
+    <br>
+   <h1 style=text-align:center>Moderate Yoga Custom Workouts:</h1>
+
+      <table class="center">
+    {% for workouts in workouts_list %}
+          <tr>
+        <td style ="text-align:center">{{workouts.workout_info}}</td>
+          </tr> 
+        {% endfor %}
+          </table>
+
+
+</html>

@@ -1,0 +1,111 @@
+
+<html>
+    <h1 style=text-align:center>Easy Cardio Workouts </h1>
+    <p class=margin-left:50px> The only equipment necessary for this workout is a treadmill. You will run at different speeds throughout this workout for 40 minutes. Follow the table below:</p>
+
+<head>
+<style>
+table {
+  font-family: Tahoma, sans-serif;
+  border-collapse: collapse;
+  width: 99%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Workout Table</h2>
+
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Speed (mph)</th>
+    <th>Incline</th>
+  </tr>
+  <tr>
+    <td>0:00-5:00</td>
+    <td>3.0</td>
+    <td>1.0</td>
+  </tr>
+  <tr>
+    <td>5:00-10:00</td>
+    <td>3.5</td>
+    <td>1.0</td>
+  </tr>
+  <tr>
+    <td>10:00-12:00</td>
+    <td>5.5</td>
+    <td>1.0</td>
+  </tr>
+  <tr>
+    <td>12:00-16:00</td>
+    <td>3.5</td>
+    <td>1.0</td>
+  </tr>
+    <tr>
+    <td>16:00-18:00</td>
+    <td>5.5</td>
+    <td>1.0</td>
+  </tr>
+  <tr>
+    <td>18:00-22:00</td>
+    <td>5.8</td>
+    <td>1.0</td>
+  </tr>
+    <tr>
+    <td>22:00-24:00</td>
+    <td>5.8</td>
+    <td>1.0</td>
+  </tr>
+  <tr>
+    <td>24:00-28:00</td>
+    <td>3.5</td>
+    <td>1.0</td>
+  </tr>
+  <tr>
+    <td>28:00-30:00</td>
+    <td>5.8</td>
+    <td>1.0</td>
+  </tr>
+  <tr>
+    <td>30:00-35:00</td>
+    <td>3.5</td>
+    <td>1.0</td>
+  </tr>
+  <tr>
+    <td>35:00-40:00</td>
+    <td>3.0</td>
+    <td>1.0</td>
+  </tr>
+
+
+
+</table>
+
+</body>
+    <br>
+    <br>
+   <h1 style=text-align:center>Easy Cardio Custom Workouts:</h1>
+
+      <table class="center">
+    {% for workouts in workouts_list %}
+          <tr>
+        <td style ="text-align:center">{{workouts.workout_info}}</td>
+          </tr> 
+        {% endfor %}
+          </table>
+
+        <!-- Figure out how to insert a table-->
+
+
+</html>
