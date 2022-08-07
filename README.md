@@ -1,6 +1,6 @@
 # GitFit
 
-# The Original Github Link that the team members used for development was removed as this was a School Project that utilized a repo that was owned by the course instructors.
+* The Original Github Link that the team members used for development was removed as this was a School Project that utilized a repo that was owned by the course instructors.
 
 * This is an Exercise Gamifiation app that's called “GitFit” and it essentially allows users to complete different types of workouts of various difficulty levels, earn points for completed workouts, submit their own workouts, etc.
 * Team Members: Rodas Addis, Burhan Chaudhry, Ajay Desai, Alice Innis, Jefferson J. Pan
